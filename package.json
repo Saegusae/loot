@@ -2,7 +2,12 @@
   "name": "loot",
   "version": "1.0.0",
   "description": "Auto looting utility for TERA",
-  "keywords": ["TERA", "proxy", "mod", "loot"],
+  "keywords": [
+    "TERA",
+    "proxy",
+    "mod",
+    "loot"
+  ],
   "scripts": {
     "build": "gulp"
   },
@@ -16,5 +21,6 @@
     "gulp-typescript": "^4.0.1",
     "typescript": "^2.7.2",
     "command": "github:pinkipi/command"
-  }
+  },
+  "dependencies": {}
 }
