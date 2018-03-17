@@ -2,12 +2,10 @@
   "name": "tera-ts-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate to start modding tera with Typescript",
-  "keywords": [
-    "TERA",
-    "proxy",
-    "mod",
-    "boilerplate"
-  ],
+  "keywords": ["TERA", "proxy", "mod", "boilerplate"],
+  "scripts": {
+    "build": "gulp"
+  },
   "author": "Saegusa",
   "license": "ISC",
   "devDependencies": {
