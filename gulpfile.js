@@ -24,7 +24,7 @@ let defs = {
 let files = {};
 
 let mod = {
-  servers: [""],
+  servers: ["https://raw.githubusercontent.com/saegusae/loot/dist/"],
   supportUrl: "https://discord.gg/maqBmJV"
 };
 
