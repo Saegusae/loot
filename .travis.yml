@@ -1,15 +1,17 @@
 language: node_js
 node_js:
-  - '9'
-install:
-  - npm install
+- '9'
 before_script:
-  - npm run build
-
+- npm install -g gulp-cli
+script: gulp
+before_deploy:
+- cd build
 deploy:
-  - provider: releases
-    file_glob: true
-    file: "loot-*.zip"
-    skip_cleanup: true
-    on:
-      tags: true
+  provider: releases
+  api_key:
+    secure: e8fqla4g0pIXWnsE0mVGuZOW3CWWu2uGA/U3vZbpSShE7WGsRDJnp3+WJhPkJapo/Z0VQh7H5VXu6fl2zVrvLA+0lntVdfIg6IVCivuRfKsx4JARFEO/ETXcf2/lGqFyIwgdxz8CQ+h7z2MO7tv0xrBhudua6GvostxZ2k7mxjxyxgx/QltiyClQCq7sFZq+y+7T1UmiOe+VPvVPuoav1+LO/Khl38PazLMd6KPrxwld89JgFuzRdlmtBMJoRYbvcrw+1PKPeYdZSG6CuKbQeMn1h3AckV9U9iUXmkOEqoSrHlvOjTKBKEl1/I3fs+5NR7LInbE9tmIsWTzER5/AETdB+JSpHUKJ/NHBJSPKU0coG3m4KkGcl3FQVOyuYnjEqYVlj9UdD3UFdrUFKNx3fPVrC1ScdW5mOgA9U/Ixf5xNzXjb2oEaOmjFtgvin/NODUQ7mtErbNcIbRpxkWadSP2dNuUpDwHS93CZL821EFa/RYvP2mBIWix6KCGIwYUXijN8xS5p4SFoEIdTOOOEKh85En4kXRjkBiKl2Hq9+k7qXP8Sxk8Lk8mUEeZGDR8Ew0ccvJKFSLpODnTUoTtWyVGs39OKstOewKkrTjIKEDE/lSfNbg+tXAh9EKDqblQ3iB17+f3Eoh3xgIZaXLEMiRsj1tNMGniNiXTXpyEKYMs=
+  file_glob: true
+  file: loot-*.zip
+  skip_cleanup: true
+  on:
+    tags: true
