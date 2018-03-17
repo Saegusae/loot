@@ -1,8 +1,8 @@
 {
-  "name": "tera-ts-boilerplate",
+  "name": "loot",
   "version": "1.0.0",
-  "description": "Boilerplate to start modding tera with Typescript",
-  "keywords": ["TERA", "proxy", "mod", "boilerplate"],
+  "description": "Auto looting utility for TERA",
+  "keywords": ["TERA", "proxy", "mod", "loot"],
   "scripts": {
     "build": "gulp"
   },
