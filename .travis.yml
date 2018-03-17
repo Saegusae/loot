@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '9'
+install:
+  - npm install
+before_script:
+  - npm run build
+
+deploy:
+  - provider: releases
+    file_glob: true
+    file: "loot-*.zip"
+    skip_cleanup: true
+    on:
+      tags: true
