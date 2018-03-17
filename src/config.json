@@ -1,0 +1,20 @@
+{
+  "enabled": { "overworld": true, "instance": true },
+  "lootRange": 150,
+  "lootInterval": 300,
+  "template": "default",
+  "templates": {
+    "default": {
+      "whitelist": [],
+      "blacklist": []
+    },
+    "essence_only": {
+      "whitelist": [],
+      "blacklist": []
+    },
+    "motes_only": {
+      "whitelist": [],
+      "blacklist": []
+    }
+  }
+}

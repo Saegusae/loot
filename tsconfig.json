@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": false,
+    "outDir": "build/loot",
+    "declaration": true,
+    "lib": ["es6", "es2016.array.include", "es2017.object"],
+    "esModuleInterop": false
+  },
+  "include": ["./src/**/*.ts"]
+}
