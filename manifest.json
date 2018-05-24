@@ -4,7 +4,7 @@
     "index.js": "d4bc468f9afcb63d5318fc3f082068e0cad6b5a0d8845bad3679f0a08095caa7",
     "Loot.js": "c7d48c340d46eab72aac34306796ed43e4aa4f28cc2ea58e5bff80355e0d36b5",
     "README.md": "48f883ad90146aef308c45be447ea5ae852675a560772a4313568adbcb1918c9",
-    "config.json": "ea14df28f35cdd683f3ef07d4c8a6a4f745100af5ea38f00eaa75719092a2b86"
+    "config.json": { "overwrite" : false, "hash" : "ea14df28f35cdd683f3ef07d4c8a6a4f745100af5ea38f00eaa75719092a2b86" }
   },
   "defs": {
     "S_LOGIN": 9,
