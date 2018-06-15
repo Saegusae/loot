@@ -6,7 +6,7 @@
     "config.json": { "overwrite" : false, "hash" : "ea14df28f35cdd683f3ef07d4c8a6a4f745100af5ea38f00eaa75719092a2b86" }
   },
   "defs": {
-    "S_LOGIN": 9,
+    "S_LOGIN": 10,
     "C_PLAYER_LOCATION": 3,
     "S_SPAWN_DROPITEM": 6,
     "S_DESPAWN_DROPITEM": 4,
