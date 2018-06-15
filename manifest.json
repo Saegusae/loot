@@ -1,19 +1,19 @@
 {
-  "files": {
-    "index.js": "d4bc468f9afcb63d5318fc3f082068e0cad6b5a0d8845bad3679f0a08095caa7",
-    "Loot.js": "c7d48c340d46eab72aac34306796ed43e4aa4f28cc2ea58e5bff80355e0d36b5",
-    "README.md": "48f883ad90146aef308c45be447ea5ae852675a560772a4313568adbcb1918c9",
+	"files": {
+		"index.js": "d4bc468f9afcb63d5318fc3f082068e0cad6b5a0d8845bad3679f0a08095caa7",
+		"Loot.js": "87e4efc0f11beb9dda3c24dfa095a6639c02fa4f582c0f5db66f7d52f619ae9d",
+		"README.md": "48f883ad90146aef308c45be447ea5ae852675a560772a4313568adbcb1918c9",
     "config.json": { "overwrite" : false, "hash" : "ea14df28f35cdd683f3ef07d4c8a6a4f745100af5ea38f00eaa75719092a2b86" }
-  },
-  "defs": {
-    "S_LOGIN": 9,
-    "C_PLAYER_LOCATION": 3,
-    "S_SPAWN_DROPITEM": 6,
-    "S_DESPAWN_DROPITEM": 4,
-    "S_LOAD_TOPO": 3,
-    "S_MOUNT_VEHICLE": 2,
-    "S_UNMOUNT_VEHICLE": 2,
-    "S_CREATURE_LIFE": 2,
-    "S_SPAWN_ME": 2
-  }
+	},
+	"defs": {
+		"S_LOGIN": 10,
+		"C_PLAYER_LOCATION": 3,
+		"S_SPAWN_DROPITEM": 6,
+		"S_DESPAWN_DROPITEM": 4,
+		"S_LOAD_TOPO": 3,
+		"S_MOUNT_VEHICLE": 2,
+		"S_UNMOUNT_VEHICLE": 2,
+		"S_CREATURE_LIFE": 2,
+		"S_SPAWN_ME": 2
+	}
 }
