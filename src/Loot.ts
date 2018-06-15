@@ -50,7 +50,7 @@ export class Loot {
 
     this.hooks = [
       {
-        packet: ["S_LOGIN", 9],
+        packet: ["S_LOGIN", 10],
         callback: _ => {
           this.gameId = _.gameId;
           this.template = this.config
