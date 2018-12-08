@@ -7,21 +7,21 @@ const ts = require("gulp-typescript");
 const project = ts.createProject("./tsconfig.json");
 
 let defs = {
-  S_LOGIN: 9,
-  C_PLAYER_LOCATION: 3,
+  S_LOGIN: 10,
+  C_PLAYER_LOCATION: 5,
   S_SPAWN_DROPITEM: 6,
   S_DESPAWN_DROPITEM: 4,
   S_LOAD_TOPO: 3,
   S_MOUNT_VEHICLE: 2,
   S_UNMOUNT_VEHICLE: 2,
-  S_CREATURE_LIFE: 2,
-  S_SPAWN_ME: 2
+  S_CREATURE_LIFE: 3,
+  S_SPAWN_ME: 3
 };
 let files = {};
 
 let mod = {
   servers: ["https://raw.githubusercontent.com/saegusae/loot/dist/"],
-  supportUrl: "https://discord.gg/maqBmJV"
+  supportUrl: "https://discord.gg/dUNDDtw"
 };
 
 gulp.task("copy", function() {
@@ -73,4 +73,4 @@ gulp.task("typescript", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("default", gulp.series("typescript", "copy", "generate"));
+gulp.task("default", ["typescript", "copy", "generate"]);

@@ -59,7 +59,7 @@ export class Loot {
         }
       },
       {
-        packet: ["C_PLAYER_LOCATION", 3],
+        packet: ["C_PLAYER_LOCATION", 5],
         callback: _ => Object.assign(this.position, _.loc)
       },
       {
@@ -95,14 +95,14 @@ export class Loot {
         }
       },
       {
-        packet: ["S_CREATURE_LIFE", 2],
+        packet: ["S_CREATURE_LIFE", 3],
         callback: _ => {
           if (this.gameId.toString() === _.gameId.toString())
             this.isDead = !_.alive;
         }
       },
       {
-        packet: ["S_SPAWN_ME", 2],
+        packet: ["S_SPAWN_ME", 3],
         callback: _ => {
           Object.assign(this.position, _.loc);
           this.isDead = !_.alive;
@@ -229,7 +229,7 @@ export class Loot {
 
     for (let item of this.drops)
       if (this.isInRange(item, this.config.lootRange)) {
-        this.dispatch.toServer("C_TRY_LOOT_DROPITEM", 1, { id: item.id });
+        this.dispatch.toServer("C_TRY_LOOT_DROPITEM", 4, { gameId: item.id });
       }
 
     this.lootTimer = setTimeout(this.loot.bind(this), this.config.lootInterval);
