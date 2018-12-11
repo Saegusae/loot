@@ -1,14 +1,25 @@
 {
-  "files": {},
-  "defs": {
-    "S_LOGIN": 10,
-    "C_PLAYER_LOCATION": 5,
-    "S_SPAWN_DROPITEM": 6,
-    "S_DESPAWN_DROPITEM": 4,
-    "S_LOAD_TOPO": 3,
-    "S_MOUNT_VEHICLE": 2,
-    "S_UNMOUNT_VEHICLE": 2,
-    "S_CREATURE_LIFE": 3,
-    "S_SPAWN_ME": 3
-  }
+	"files": {
+		"Droplog.js": "44907bfc20407171edf4315596f996bd52e127faac2440f3bb05e47d72a99af9",
+		"Loot.js": "c15209d9335fcaf46f9e89604bfbe514c48874d7bad0315421299b1cc2e3daf1",
+		"README.md": "48f883ad90146aef308c45be447ea5ae852675a560772a4313568adbcb1918c9",
+		"config.json": {
+			"overwrite": false,
+			"hash": "ea14df28f35cdd683f3ef07d4c8a6a4f745100af5ea38f00eaa75719092a2b86"
+		},
+		"index.js": "d4bc468f9afcb63d5318fc3f082068e0cad6b5a0d8845bad3679f0a08095caa7",
+		"module.json": "b4b580cd4a757e16f15c832ab6be1ac36f107e27675187da7013156d543e6f7e"
+	},
+	"defs": {
+		"C_PLAYER_LOCATION": 5,
+		"C_TRY_LOOT_DROPITEM": 4,
+		"S_CREATURE_LIFE": 3,
+		"S_DESPAWN_DROPITEM": 4,
+		"S_LOAD_TOPO": 3,
+		"S_LOGIN": 10,
+		"S_MOUNT_VEHICLE": 2,
+		"S_SPAWN_DROPITEM": 6,
+		"S_SPAWN_ME": 3,
+		"S_UNMOUNT_VEHICLE": 2
+	}
 }

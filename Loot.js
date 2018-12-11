@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = require("command");
 const path = require("path");
 const fs = require("fs");
 const DEFAULT_CONFIG = {
@@ -23,7 +22,6 @@ class Loot {
     constructor(dispatch) {
         this.dispatch = dispatch;
         this.records = [];
-        this.command = Command(this.dispatch);
         this.position = { x: 0, y: 0, z: 0 };
         this.drops = [];
         if (!fs.existsSync(path.join(__dirname, "config.json")))
@@ -90,11 +88,11 @@ class Loot {
                 }
             }
         ];
-        this.command.add("loot", (...args) => {
+        this.dispatch.command.add("loot", (...args) => {
             if (args.length < 1) {
                 this.config.enabled.overworld = !this.config.enabled.overworld;
                 this.config.enabled.instance = !this.config.enabled.instance;
-                this.command.message("[Loot] Loot in overworld: " +
+                this.dispatch.command.message("Loot in overworld: " +
                     this.config.enabled.overworld +
                     " | Loot in instances: " +
                     this.config.enabled.instance);
@@ -103,29 +101,29 @@ class Loot {
                 switch (args[0]) {
                     case "overworld":
                         this.config.enabled.overworld = !this.config.enabled.overworld;
-                        this.command.message("[Loot] Loot in overworld: " + this.config.enabled.overworld);
+                        this.dispatch.command.message("Loot in overworld: " + this.config.enabled.overworld);
                         break;
                     case "instance":
                         this.config.enabled.instance = !this.config.enabled.instance;
-                        this.command.message("[Loot] Loot in instances: " + this.config.enabled.instance);
+                        this.dispatch.command.message("Loot in instances: " + this.config.enabled.instance);
                         break;
                     case "templates":
-                        this.command.message("[Loot] Available templates: " +
+                        this.dispatch.command.message("Available templates: " +
                             Object.keys(this.config.templates).toString());
                         break;
                     case "set":
                     case "use":
                         if (args.length < 2) {
-                            this.command.message("[Loot] Please define a template to use.");
+                            this.dispatch.command.message("Please define a template to use.");
                             break;
                         }
                         if (!(args[1] in this.config.templates)) {
-                            this.command.message("[Loot] Cannot find template: " + args[1] + " in configuration.");
+                            this.dispatch.command.message("Cannot find template: " + args[1] + " in configuration.");
                             break;
                         }
                         this.config.template = args[1];
                         this.template = this.config.templates[args[1]];
-                        this.command.message("[Loot] Active loot template set to: " + args[1]);
+                        this.dispatch.command.message("Active loot template set to: " + args[1]);
                         break;
                     case "save":
                         this.saveConfig();
@@ -134,7 +132,7 @@ class Loot {
                         this.loadConfig();
                         break;
                     default:
-                        this.command.message("[Loot] Commands: overworld, instance, templates, save, load");
+                        this.dispatch.command.message("Commands: overworld, instance, templates, save, load");
                         break;
                 }
             }
