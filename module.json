@@ -1,4 +1,10 @@
 {
+  "disableAutoUpdate": false,
+  "name": "loot",
+  "author": "Saegusae",
+  "options": {
+    "niceName": "Loot"
+  },
   "servers": [
     "https://raw.githubusercontent.com/saegusae/loot/dist/"
   ],
